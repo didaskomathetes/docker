@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:latest
 # MAINTAINER Christian Meter
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -8,6 +8,7 @@ WORKDIR /tex
 
 # Install packages
 RUN apt-get update -qq && \
+    apt-get install -yqq ruby-full && \
     apt-get install -yqq locales texlive-full python-pygments gnuplot inkscape git openssh-client biber && \
     gem install rake
 
