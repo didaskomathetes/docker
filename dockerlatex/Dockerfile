@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:stretch
 # MAINTAINER Christian Meter
 
 ENV DEBIAN_FRONTEND noninteractive
